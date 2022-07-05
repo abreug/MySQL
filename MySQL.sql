@@ -64,3 +64,25 @@ INSERT INTO pessoas VALUES
 (DEFAULT,'Madson', '1912-12-2', 'F', '99.2', '1.35', 'Africa Subsariana'),
 (DEFAULT, 'Rei Diego', '1924-06-25', 'F', '34', '2.10', 'Inglaterra'),
 (DEFAULT, 'Angelo', '1964-07-01', 'F', '24', '1.80', 'Dramalandia');
+
+
+___________________________________
+
+DESCRIBE pessoas;
+
+ALTER TABLE pessoas
+ADD COLUMN profissao VARCHAR(10) AFTER nome;                                     > ADICIONA UMA COLUNA E POSICIONA DEPOIS DE ALGUM COLUNA QUE DEVE SER CITADA
+
+ALTER TABLE pessoas
+MODIFY COLUMN profissao VARCHAR(20);       >MODIFICA CARACTERISTICAS DAQUELA COLUNA
+
+ALTER TABLE pessoas 
+CHANGE COLUMN profissao prof VARCHAR(20);  >MODIFICA O NOME DAQUELA COLUNA
+
+ALTER TABLE pessoas
+ADD codigo INT FIRST;                 >INDICA QUE É PARA SER ADICIONADO NA PRIMEIRA LINHA
+
+ALTER TABLE pessoas
+RENAME TO Manitos;                         > ALTERAR O NOME DA TABELA POR COMPLETO
+
+DROP TABLE IF EXISTS nomedatabela; >APAGA A TABELA POR COMPLETO
